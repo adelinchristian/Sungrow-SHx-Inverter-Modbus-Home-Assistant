@@ -1660,7 +1660,7 @@ modbus:
         state_class: measurement
         scale: 1
         scan_interval: 4 #10
-	
+
       # Inverter Firmware version from register 13250 to 13264 as UTF8 string
       # NOTE: SH3.0-10RS and MG5-6RL are NOT supported
       - name: Inverter Firmware Version
