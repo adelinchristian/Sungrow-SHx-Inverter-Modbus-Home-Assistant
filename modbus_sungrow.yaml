@@ -25,7 +25,7 @@ modbus:
         input_type: input
         data_type: string
         count: 10
-        scan_interval: 70 #600
+        scan_interval: 600
 
       # for Sungrow batteries only
       #      - name: Sungrow battery serial
@@ -43,7 +43,7 @@ modbus:
         address: 4999 # reg 5000
         input_type: input
         data_type: uint16
-        scan_interval: 70 #600
+        scan_interval: 600
 
       - name: Daily PV generation & battery discharge
         unique_id: sg_daily_pv_gen_battery_discharge
@@ -56,7 +56,7 @@ modbus:
         device_class: energy
         state_class: total_increasing
         scale: 0.1
-        scan_interval: 70 #600
+        scan_interval: 600
 
       - name: Total PV generation & battery discharge
         unique_id: sg_total_pv_gen_battery_discharge
@@ -70,7 +70,7 @@ modbus:
         device_class: energy
         state_class: total
         scale: 0.1
-        scan_interval: 70 #600
+        scan_interval: 600
 
       - name: Inverter temperature
         unique_id: sg_inverter_temperature
@@ -83,7 +83,7 @@ modbus:
         device_class: temperature
         state_class: measurement
         scale: 0.1
-        scan_interval: 4 #10
+        scan_interval: 10
 
       - name: MPPT1 voltage
         unique_id: sg_mppt1_voltage
@@ -96,7 +96,7 @@ modbus:
         device_class: Voltage
         state_class: measurement
         scale: 0.1
-        scan_interval: 4 #10
+        scan_interval: 10
 
       - name: MPPT1 current
         unique_id: sg_mppt1_current
@@ -109,7 +109,7 @@ modbus:
         device_class: Current
         state_class: measurement
         scale: 0.1
-        scan_interval: 4 #10
+        scan_interval: 10
 
       - name: MPPT2 voltage
         unique_id: sg_mppt2_voltage
@@ -122,7 +122,7 @@ modbus:
         device_class: Voltage
         state_class: measurement
         scale: 0.1
-        scan_interval: 4 #10
+        scan_interval: 10
 
       - name: MPPT2 current
         unique_id: sg_mppt2_current
@@ -135,7 +135,7 @@ modbus:
         device_class: Current
         state_class: measurement
         scale: 0.1
-        scan_interval: 4 #10
+        scan_interval: 10
 
       # only for SH*T inverters with 3 MPPTs
       # - name: MPPT3 voltage
@@ -149,7 +149,7 @@ modbus:
       #   device_class: Voltage
       #   state_class: measurement
       #   scale: 0.1
-      #   scan_interval: 4 #10
+      #   scan_interval: 10
 
       # only for SH*T inverters with 3 MPPTs
       # - name: MPPT3 current
@@ -163,7 +163,7 @@ modbus:
       #   device_class: Current
       #   state_class: measurement
       #   scale: 0.1
-      #   scan_interval: 4 #10        
+      #   scan_interval: 10
 
       - name: Total DC power
         unique_id: sg_total_dc_power
@@ -177,7 +177,7 @@ modbus:
         device_class: power
         state_class: measurement
         scale: 1
-        scan_interval: 4 #10
+        scan_interval: 10
 
       - name: Phase A voltage
         unique_id: sg_phase_a_voltage
@@ -190,7 +190,7 @@ modbus:
         device_class: Voltage
         state_class: measurement
         scale: 0.1
-        scan_interval: 4 #10
+        scan_interval: 10
 
       - name: Phase B voltage
         unique_id: sg_phase_b_voltage
@@ -203,7 +203,7 @@ modbus:
         device_class: Voltage
         state_class: measurement
         scale: 0.1
-        scan_interval: 4 #10
+        scan_interval: 10
 
       - name: Phase C voltage
         unique_id: sg_phase_c_voltage
@@ -216,7 +216,7 @@ modbus:
         device_class: Voltage
         state_class: measurement
         scale: 0.1
-        scan_interval: 4 #10
+        scan_interval: 10
 
       - name: Reactive power
         unique_id: sg_reactive_power
@@ -230,7 +230,7 @@ modbus:
         device_class: power
         state_class: measurement
         scale: 1
-        scan_interval: 4 #10
+        scan_interval: 10
 
       - name: Power factor
         unique_id: sg_power_factor
@@ -243,7 +243,7 @@ modbus:
         device_class: power_factor
         state_class: measurement
         scale: 0.001
-        scan_interval: 4 #10
+        scan_interval: 10
 
       - name: Grid frequency
         unique_id: sg_grid_frequency
@@ -256,7 +256,7 @@ modbus:
         device_class: frequency
         state_class: measurement
         scale: 0.01
-        scan_interval: 4 #10
+        scan_interval: 10
 
       #https://www.photovoltaikforum.com/thread/166134-daten-lesen-vom-sungrow-wechselrichtern-modbus/?pageNo=13
       #Meter Active Power: 5601-5602 S32 W (Energiezähler Wirkleistung)
@@ -275,7 +275,7 @@ modbus:
         device_class: power
         state_class: measurement
         scale: 1
-        scan_interval: 4 #10
+        scan_interval: 10
 
       - name: Meter phase A active power raw
         unique_id: sg_meter_phase_a_active_power_raw
@@ -289,7 +289,7 @@ modbus:
         device_class: power
         state_class: measurement
         scale: 1
-        scan_interval: 4 #10
+        scan_interval: 10
 
       - name: Meter phase B active power raw
         unique_id: sg_meter_phase_b_active_power_raw
@@ -303,7 +303,7 @@ modbus:
         device_class: power
         state_class: measurement
         scale: 1
-        scan_interval: 4 #10
+        scan_interval: 10
 
       - name: Meter phase C active power raw
         unique_id: sg_meter_phase_c_active_power_raw
@@ -317,7 +317,7 @@ modbus:
         device_class: power
         state_class: measurement
         scale: 1
-        scan_interval: 4 #10
+        scan_interval: 10
 
       - name: BDC rated power
         unique_id: sg_bdc_rated_power
@@ -329,7 +329,7 @@ modbus:
         device_class: power
         state_class: measurement
         scale: 100
-        scan_interval: 70 #600
+        scan_interval: 600
 
       - name: BMS max. charging current
         unique_id: sg_bms_max_charging_current
@@ -367,7 +367,7 @@ modbus:
         unit_of_measurement: kWh
         device_class: energy_storage
         scale: 0.01
-        scan_interval: 70 #600
+        scan_interval: 600
 
       #https://www.photovoltaikforum.com/thread/166134-daten-lesen-vom-sungrow-wechselrichtern-modbus/?pageNo=13
       #Phase A Backup Power: 5723 S16 W (Backup Leistung Phase A)
@@ -384,7 +384,7 @@ modbus:
         device_class: power
         state_class: measurement
         scale: 1
-        scan_interval: 4 #10
+        scan_interval: 10
 
       - name: Backup phase B power
         unique_id: sg_backup_phase_b_power
@@ -397,7 +397,7 @@ modbus:
         device_class: power
         state_class: measurement
         scale: 1
-        scan_interval: 4 #10
+        scan_interval: 10
 
       - name: Backup phase C power
         unique_id: sg_backup_phase_c_power
@@ -410,7 +410,7 @@ modbus:
         device_class: power
         state_class: measurement
         scale: 1
-        scan_interval: 4 #10
+        scan_interval: 10
 
       - name: Total backup power
         device_address: !secret sungrow_modbus_slave
@@ -424,88 +424,87 @@ modbus:
         device_class: power
         state_class: measurement
         scale: 1
-        scan_interval: 4 #10
-
+        scan_interval: 10
 
       # https://www.photovoltaikforum.com/thread/166134-daten-lesen-vom-sungrow-wechselrichtern-modbus/?postID=3324464#post3324464
-      - name: Meter phase A voltage
-        unique_id: sg_meter_phase_a_voltage
-        device_address: !secret sungrow_modbus_slave
-        address: 5740 # reg 5741
-        input_type: input
-        data_type: int16
-        precision: 1
-        unit_of_measurement: V
-        device_class: voltage
-        state_class: measurement
-        scale: 0.1
-        scan_interval: 4 #10
+      # AdAr: remove the following meter sensors as they are not working properly on my SH6.0RS inverter.
+      # - name: Meter phase A voltage
+      #   unique_id: sg_meter_phase_a_voltage
+      #   device_address: !secret sungrow_modbus_slave
+      #   address: 5740 # reg 5741
+      #   input_type: input
+      #   data_type: int16
+      #   precision: 1
+      #   unit_of_measurement: V
+      #   device_class: voltage
+      #   state_class: measurement
+      #   scale: 0.1
+      #   scan_interval: 10
 
-      - name: Meter phase B voltage
-        unique_id: sg_meter_phase_b_voltage
-        device_address: !secret sungrow_modbus_slave
-        address: 5741 # reg 5742
-        input_type: input
-        data_type: int16
-        precision: 1
-        unit_of_measurement: V
-        device_class: voltage
-        state_class: measurement
-        scale: 0.1
-        scan_interval: 4 #10
+      # - name: Meter phase B voltage
+      #   unique_id: sg_meter_phase_b_voltage
+      #   device_address: !secret sungrow_modbus_slave
+      #   address: 5741 # reg 5742
+      #   input_type: input
+      #   data_type: int16
+      #   precision: 1
+      #   unit_of_measurement: V
+      #   device_class: voltage
+      #   state_class: measurement
+      #   scale: 0.1
+      #   scan_interval: 10
 
-      - name: Meter phase C voltage
-        unique_id: sg_meter_phase_c_voltage
-        device_address: !secret sungrow_modbus_slave
-        address: 5742 # reg 5743
-        input_type: input
-        data_type: int16
-        precision: 1
-        unit_of_measurement: V
-        device_class: voltage
-        state_class: measurement
-        scale: 0.1
-        scan_interval: 4 #10
+      # - name: Meter phase C voltage
+      #   unique_id: sg_meter_phase_c_voltage
+      #   device_address: !secret sungrow_modbus_slave
+      #   address: 5742 # reg 5743
+      #   input_type: input
+      #   data_type: int16
+      #   precision: 1
+      #   unit_of_measurement: V
+      #   device_class: voltage
+      #   state_class: measurement
+      #   scale: 0.1
+      #   scan_interval: 10
 
-      - name: Meter phase A current
-        unique_id: sg_meter_phase_a_current
-        device_address: !secret sungrow_modbus_slave
-        address: 5743 # reg 5744
-        input_type: input
-        data_type: uint16
-        precision: 2
-        unit_of_measurement: A
-        device_class: current
-        state_class: measurement
-        scale: 0.01
-        scan_interval: 4 #10
+      # - name: Meter phase A current
+      #   unique_id: sg_meter_phase_a_current
+      #   device_address: !secret sungrow_modbus_slave
+      #   address: 5743 # reg 5744
+      #   input_type: input
+      #   data_type: uint16
+      #   precision: 2
+      #   unit_of_measurement: A
+      #   device_class: current
+      #   state_class: measurement
+      #   scale: 0.01
+      #   scan_interval: 10
 
-      - name: Meter phase B current
-        unique_id: sg_meter_phase_b_current
-        device_address: !secret sungrow_modbus_slave
-        address: 5744 # reg 5745
-        input_type: input
-        data_type: uint16
-        precision: 2
-        unit_of_measurement: A
-        device_class: current
-        state_class: measurement
-        scale: 0.01
-        scan_interval: 4 #10
+      # - name: Meter phase B current
+      #   unique_id: sg_meter_phase_b_current
+      #   device_address: !secret sungrow_modbus_slave
+      #   address: 5744 # reg 5745
+      #   input_type: input
+      #   data_type: uint16
+      #   precision: 2
+      #   unit_of_measurement: A
+      #   device_class: current
+      #   state_class: measurement
+      #   scale: 0.01
+      #   scan_interval: 10
 
-      - name: Meter phase C current
-        unique_id: sg_meter_phase_c_current
-        device_address: !secret sungrow_modbus_slave
-        address: 5745 # reg 5746
-        input_type: input
-        data_type: uint16
-        precision: 2
-        unit_of_measurement: A
-        device_class: current
-        state_class: measurement
-        scale: 0.01
-        scan_interval: 4 #10
-
+      # - name: Meter phase C current
+      #   unique_id: sg_meter_phase_c_current
+      #   device_address: !secret sungrow_modbus_slave
+      #   address: 5745 # reg 5746
+      #   input_type: input
+      #   data_type: uint16
+      #   precision: 2
+      #   unit_of_measurement: A
+      #   device_class: current
+      #   state_class: measurement
+      #   scale: 0.01
+      #   scan_interval: 10
 
       # following statistic sensors only work on some SH*RT inverters
       # (only LAN attached devices)
@@ -522,7 +521,7 @@ modbus:
       #   device_class: energy
       #   state_class: total_increasing
       #   scale: 0.1
-      #   scan_interval: 70 #600
+      #   scan_interval: 600
 
       # - name: Monthly PV generation (02 February)
       #   unique_id: sg_monthly_pv_generation_02_february
@@ -535,7 +534,7 @@ modbus:
       #   device_class: energy
       #   state_class: total_increasing
       #   scale: 0.1
-      #   scan_interval: 70 #600
+      #   scan_interval: 600
 
       # - name: Monthly PV generation (03 March)
       #   unique_id: sg_monthly_pv_generation_03_march
@@ -548,7 +547,7 @@ modbus:
       #   device_class: energy
       #   state_class: total_increasing
       #   scale: 0.1
-      #   scan_interval: 70 #600
+      #   scan_interval: 600
 
       # - name: Monthly PV generation (04 April)
       #   unique_id: sg_monthly_pv_generation_04_april
@@ -561,7 +560,7 @@ modbus:
       #   device_class: energy
       #   state_class: total_increasing
       #   scale: 0.1
-      #   scan_interval: 70 #600
+      #   scan_interval: 600
 
       # - name: Monthly PV generation (05 May)
       #   unique_id: sg_monthly_pv_generation_05_may
@@ -574,7 +573,7 @@ modbus:
       #   device_class: energy
       #   state_class: total_increasing
       #   scale: 0.1
-      #   scan_interval: 70 #600
+      #   scan_interval: 600
 
       # - name: Monthly PV generation (06 June)
       #   unique_id: sg_monthly_pv_generation_06_june
@@ -587,7 +586,7 @@ modbus:
       #   device_class: energy
       #   state_class: total_increasing
       #   scale: 0.1
-      #   scan_interval: 70 #600
+      #   scan_interval: 600
 
       # - name: Monthly PV generation (07 July)
       #   unique_id: sg_monthly_pv_generation_07_july
@@ -600,7 +599,7 @@ modbus:
       #   device_class: energy
       #   state_class: total_increasing
       #   scale: 0.1
-      #   scan_interval: 70 #600
+      #   scan_interval: 600
 
       # - name: Monthly PV generation (08 August)
       #   unique_id: sg_monthly_pv_generation_08_august
@@ -613,7 +612,7 @@ modbus:
       #   device_class: energy
       #   state_class: total_increasing
       #   scale: 0.1
-      #   scan_interval: 70 #600
+      #   scan_interval: 600
 
       # - name: Monthly PV generation (09 September)
       #   unique_id: sg_monthly_pv_generation_09_september
@@ -626,7 +625,7 @@ modbus:
       #   device_class: energy
       #   state_class: total_increasing
       #   scale: 0.1
-      #   scan_interval: 70 #600
+      #   scan_interval: 600
 
       # - name: Monthly PV generation (10 October)
       #   unique_id: sg_monthly_pv_generation_10_october
@@ -639,7 +638,7 @@ modbus:
       #   device_class: energy
       #   state_class: total_increasing
       #   scale: 0.1
-      #   scan_interval: 70 #600
+      #   scan_interval: 600
 
       # - name: Monthly PV generation (11 November)
       #   unique_id: sg_monthly_pv_generation_11_november
@@ -652,7 +651,7 @@ modbus:
       #   device_class: energy
       #   state_class: total_increasing
       #   scale: 0.1
-      #   scan_interval: 70 #600
+      #   scan_interval: 600
 
       # - name: Monthly PV generation (12 December)
       #   unique_id: sg_monthly_pv_generation_12_december
@@ -665,7 +664,7 @@ modbus:
       #   device_class: energy
       #   state_class: total_increasing
       #   scale: 0.1
-      #   scan_interval: 70 #600
+      #   scan_interval: 600
       # # End monthly PV generation
 
       # # Start yearly pv generation
@@ -681,7 +680,7 @@ modbus:
       #   device_class: energy
       #   state_class: total_increasing
       #   scale: 0.1
-      #   scan_interval: 70 #600
+      #   scan_interval: 600
 
       # - name: Yearly PV generation (2020)
       #   unique_id: sg_yearly_pv_generation_2020
@@ -695,7 +694,7 @@ modbus:
       #   device_class: energy
       #   state_class: total_increasing
       #   scale: 0.1
-      #   scan_interval: 70 #600
+      #   scan_interval: 600
 
       # - name: Yearly PV generation (2021)
       #   unique_id: sg_yearly_pv_generation_2021
@@ -709,7 +708,7 @@ modbus:
       #   device_class: energy
       #   state_class: total_increasing
       #   scale: 0.1
-      #   scan_interval: 70 #600
+      #   scan_interval: 600
 
       # - name: Yearly PV generation (2022)
       #   unique_id: sg_yearly_pv_generation_2022
@@ -723,7 +722,7 @@ modbus:
       #   device_class: energy
       #   state_class: total_increasing
       #   scale: 0.1
-      #   scan_interval: 70 #600
+      #   scan_interval: 600
 
       # - name: Yearly PV generation (2023)
       #   unique_id: sg_yearly_pv_generation_2023
@@ -737,7 +736,7 @@ modbus:
       #   device_class: energy
       #   state_class: total_increasing
       #   scale: 0.1
-      #   scan_interval: 70 #600
+      #   scan_interval: 600
 
       # - name: Yearly PV generation (2024)
       #   unique_id: sg_yearly_pv_generation_2024
@@ -751,7 +750,7 @@ modbus:
       #   device_class: energy
       #   state_class: total_increasing
       #   scale: 0.1
-      #   scan_interval: 70 #600
+      #   scan_interval: 600
 
       # - name: Yearly PV generation (2025)
       #   unique_id: sg_yearly_pv_generation_2025
@@ -765,7 +764,7 @@ modbus:
       #   device_class: energy
       #   state_class: total_increasing
       #   scale: 0.1
-      #   scan_interval: 70 #600
+      #   scan_interval: 600
 
       # - name: Yearly PV generation (2026)
       #   unique_id: sg_yearly_pv_generation_2026
@@ -779,7 +778,7 @@ modbus:
       #   device_class: energy
       #   state_class: total_increasing
       #   scale: 0.1
-      #   scan_interval: 70 #600
+      #   scan_interval: 600
 
       # - name: Yearly PV generation (2027)
       #   unique_id: sg_yearly_pv_generation_2027
@@ -793,7 +792,7 @@ modbus:
       #   device_class: energy
       #   state_class: total_increasing
       #   scale: 0.1
-      #   scan_interval: 70 #600
+      #   scan_interval: 600
 
       # - name: Yearly PV generation (2028)
       #   unique_id: sg_yearly_pv_generation_2028
@@ -807,7 +806,7 @@ modbus:
       #   device_class: energy
       #   state_class: total_increasing
       #   scale: 0.1
-      #   scan_interval: 70 #600
+      #   scan_interval: 600
 
       # - name: Yearly PV generation (2029)
       #   unique_id: sg_yearly_pv_generation_2029
@@ -821,7 +820,7 @@ modbus:
       #   device_class: energy
       #   state_class: total_increasing
       #   scale: 0.1
-      #   scan_interval: 70 #600
+      #   scan_interval: 600
       # # End yearly pv generation
 
       # # Start monthly export
@@ -836,7 +835,7 @@ modbus:
       #   device_class: energy
       #   state_class: total_increasing
       #   scale: 0.1
-      #   scan_interval: 70 #600
+      #   scan_interval: 600
 
       # - name: Monthly export (02 February)
       #   unique_id: sg_monthly_export_02_february
@@ -849,7 +848,7 @@ modbus:
       #   device_class: energy
       #   state_class: total_increasing
       #   scale: 0.1
-      #   scan_interval: 70 #600
+      #   scan_interval: 600
 
       # - name: Monthly export (03 March)
       #   unique_id: sg_monthly_export_03_march
@@ -862,7 +861,7 @@ modbus:
       #   device_class: energy
       #   state_class: total_increasing
       #   scale: 0.1
-      #   scan_interval: 70 #600
+      #   scan_interval: 600
 
       # - name: Monthly export (04 April)
       #   unique_id: sg_monthly_export_04_april
@@ -875,7 +874,7 @@ modbus:
       #   device_class: energy
       #   state_class: total_increasing
       #   scale: 0.1
-      #   scan_interval: 70 #600
+      #   scan_interval: 600
 
       # - name: Monthly export (05 May)
       #   unique_id: sg_monthly_export_05_may
@@ -888,7 +887,7 @@ modbus:
       #   device_class: energy
       #   state_class: total_increasing
       #   scale: 0.1
-      #   scan_interval: 70 #600
+      #   scan_interval: 600
 
       # - name: Monthly export (06 June)
       #   unique_id: sg_monthly_export_06_june
@@ -901,7 +900,7 @@ modbus:
       #   device_class: energy
       #   state_class: total_increasing
       #   scale: 0.1
-      #   scan_interval: 70 #600
+      #   scan_interval: 600
 
       # - name: Monthly export (07 July)
       #   unique_id: sg_monthly_export_07_july
@@ -914,7 +913,7 @@ modbus:
       #   device_class: energy
       #   state_class: total_increasing
       #   scale: 0.1
-      #   scan_interval: 70 #600
+      #   scan_interval: 600
 
       # - name: Monthly export (08 August)
       #   unique_id: sg_monthly_export_08_august
@@ -927,7 +926,7 @@ modbus:
       #   device_class: energy
       #   state_class: total_increasing
       #   scale: 0.1
-      #   scan_interval: 70 #600
+      #   scan_interval: 600
 
       # - name: Monthly export (09 September)
       #   unique_id: sg_monthly_export_09_september
@@ -940,7 +939,7 @@ modbus:
       #   device_class: energy
       #   state_class: total_increasing
       #   scale: 0.1
-      #   scan_interval: 70 #600
+      #   scan_interval: 600
 
       # - name: Monthly export (10 October)
       #   unique_id: sg_monthly_export_10_october
@@ -953,7 +952,7 @@ modbus:
       #   device_class: energy
       #   state_class: total_increasing
       #   scale: 0.1
-      #   scan_interval: 70 #600
+      #   scan_interval: 600
 
       # - name: Monthly export (11 November)
       #   unique_id: sg_monthly_export_11_november
@@ -966,7 +965,7 @@ modbus:
       #   device_class: energy
       #   state_class: total_increasing
       #   scale: 0.1
-      #   scan_interval: 70 #600
+      #   scan_interval: 600
 
       # - name: Monthly export (12 December)
       #   unique_id: sg_monthly_export_12_december
@@ -979,7 +978,7 @@ modbus:
       #   device_class: energy
       #   state_class: total_increasing
       #   scale: 0.1
-      #   scan_interval: 70 #600
+      #   scan_interval: 600
       # # End monthly export
 
       # # Start yearly export energy from PV
@@ -995,7 +994,7 @@ modbus:
       #   device_class: energy
       #   state_class: total
       #   scale: 0.1
-      #   scan_interval: 70 #600
+      #   scan_interval: 600
 
       # - name: Yearly Export (2020)
       #   unique_id: sg_yearly_export_2020
@@ -1009,7 +1008,7 @@ modbus:
       #   device_class: energy
       #   state_class: total
       #   scale: 0.1
-      #   scan_interval: 70 #600
+      #   scan_interval: 600
 
       # - name: Yearly Export (2021)
       #   unique_id: sg_yearly_export_2021
@@ -1023,7 +1022,7 @@ modbus:
       #   device_class: energy
       #   state_class: total
       #   scale: 0.1
-      #   scan_interval: 70 #600
+      #   scan_interval: 600
 
       # - name: Yearly Export (2022)
       #   unique_id: sg_yearly_export_2022
@@ -1037,7 +1036,7 @@ modbus:
       #   device_class: energy
       #   state_class: total
       #   scale: 0.1
-      #   scan_interval: 70 #600
+      #   scan_interval: 600
 
       # - name: Yearly Export (2023)
       #   unique_id: sg_yearly_export_2023
@@ -1051,7 +1050,7 @@ modbus:
       #   device_class: energy
       #   state_class: total
       #   scale: 0.1
-      #   scan_interval: 70 #600
+      #   scan_interval: 600
 
       # - name: Yearly Export (2024)
       #   unique_id: sg_yearly_export_2024
@@ -1065,7 +1064,7 @@ modbus:
       #   device_class: energy
       #   state_class: total
       #   scale: 0.1
-      #   scan_interval: 70 #600
+      #   scan_interval: 600
 
       # - name: Yearly Export (2025)
       #   unique_id: sg_yearly_export_2025
@@ -1079,7 +1078,7 @@ modbus:
       #   device_class: energy
       #   state_class: total
       #   scale: 0.1
-      #   scan_interval: 70 #600
+      #   scan_interval: 600
 
       # - name: Yearly Export (2026)
       #   unique_id: sg_yearly_export_2026
@@ -1093,7 +1092,7 @@ modbus:
       #   device_class: energy
       #   state_class: total
       #   scale: 0.1
-      #   scan_interval: 70 #600
+      #   scan_interval: 600
 
       # - name: Yearly Export (2027)
       #   unique_id: sg_yearly_export_2027
@@ -1107,7 +1106,7 @@ modbus:
       #   device_class: energy
       #   state_class: total
       #   scale: 0.1
-      #   scan_interval: 70 #600
+      #   scan_interval: 600
 
       # - name: Yearly Export (2028)
       #   unique_id: sg_yearly_export_2028
@@ -1121,7 +1120,7 @@ modbus:
       #   device_class: energy
       #   state_class: total
       #   scale: 0.1
-      #   scan_interval: 70 #600
+      #   scan_interval: 600
       # # End yearly export energy from PV
 
       - name: System state
@@ -1133,7 +1132,7 @@ modbus:
         precision: 0
         scale: 1
         state_class: measurement
-        scan_interval: 4 #10
+        scan_interval: 10
 
       # register running state is not available for certain SH*RS inverters
       # template sensors are used to determine the states based on other sensors
@@ -1146,7 +1145,7 @@ modbus:
         precision: 0
         state_class: measurement
         scale: 1
-        scan_interval: 4 #10
+        scan_interval: 10
 
       - name: Load adjustment mode selection raw
         unique_id: sg_load_adjustment_mode_selection_raw
@@ -1155,7 +1154,7 @@ modbus:
         input_type: holding
         data_type: uint16
         state_class: measurement
-        scan_interval: 4 #10        
+        scan_interval: 10
 
       - name: Daily PV generation
         unique_id: sg_daily_pv_generation
@@ -1168,7 +1167,7 @@ modbus:
         device_class: energy
         state_class: total_increasing
         scale: 0.1
-        scan_interval: 70 #600
+        scan_interval: 600
 
       - name: Total PV generation
         unique_id: sg_total_pv_generation
@@ -1182,7 +1181,7 @@ modbus:
         device_class: energy
         state_class: total
         scale: 0.1
-        scan_interval: 70 #600
+        scan_interval: 600
 
       - name: Daily exported energy from PV
         unique_id: sg_daily_exported_energy_from_PV
@@ -1195,7 +1194,7 @@ modbus:
         device_class: energy
         state_class: total_increasing
         scale: 0.1
-        scan_interval: 70 #600
+        scan_interval: 600
 
       - name: Total exported energy from PV
         unique_id: sg_total_exported_energy_from_pv
@@ -1209,7 +1208,7 @@ modbus:
         device_class: energy
         state_class: total
         scale: 0.1
-        scan_interval: 70 #600
+        scan_interval: 600
 
       - name: Load power
         unique_id: sg_load_power
@@ -1223,7 +1222,7 @@ modbus:
         device_class: power
         state_class: measurement
         scale: 1
-        scan_interval: 4 #10
+        scan_interval: 10
 
       # this value returns a positive value when exporting and a negative value when importing power
       - name: Export power raw
@@ -1238,7 +1237,7 @@ modbus:
         device_class: power
         state_class: measurement
         scale: 1
-        scan_interval: 4 #10
+        scan_interval: 10
 
       - name: Load adjustment mode ON/OFF selection raw
         unique_id: sg_load_adjustment_mode_on_off_selection_raw
@@ -1247,7 +1246,7 @@ modbus:
         input_type: holding
         data_type: uint16
         state_class: measurement
-        scan_interval: 4 #10        
+        scan_interval: 10
 
       - name: Daily battery charge from PV
         unique_id: sg_daily_battery_charge_from_pv
@@ -1260,7 +1259,7 @@ modbus:
         device_class: energy
         state_class: total_increasing
         scale: 0.1
-        scan_interval: 70 #600
+        scan_interval: 600
 
       - name: Total battery charge from PV
         unique_id: sg_total_battery_charge_from_pv
@@ -1274,7 +1273,7 @@ modbus:
         device_class: energy
         state_class: total
         scale: 0.1
-        scan_interval: 70 #600
+        scan_interval: 600
 
       - name: Daily direct energy consumption
         unique_id: sg_daily_direct_energy_consumption
@@ -1287,7 +1286,7 @@ modbus:
         device_class: energy
         state_class: total_increasing
         scale: 0.1
-        scan_interval: 70 #600
+        scan_interval: 600
 
       - name: Total direct energy consumption
         unique_id: sg_total_direct_energy_consumption
@@ -1301,7 +1300,7 @@ modbus:
         device_class: energy
         state_class: total
         scale: 0.1
-        scan_interval: 70 #600
+        scan_interval: 600
 
       - name: Battery voltage
         unique_id: sg_battery_voltage
@@ -1314,7 +1313,7 @@ modbus:
         device_class: Voltage
         state_class: measurement
         scale: 0.1
-        scan_interval: 4 #10
+        scan_interval: 10
 
       # note: datasheet states that this value is unsigned, but it is acually signed:
       # https://github.com/mkaiser/Sungrow-SHx-Inverter-Modbus-Home-Assistant/issues/304
@@ -1329,7 +1328,7 @@ modbus:
         state_class: measurement
         device_class: Current
         scale: 0.1
-        scan_interval: 4 #10
+        scan_interval: 10
 
       # old firmware ( before october 2024): always positive battery power
       # use binary_sensor.battery_charging | discharging to retrieve the direction of the energy flow
@@ -1347,7 +1346,7 @@ modbus:
         device_class: power
         state_class: measurement
         scale: 1
-        scan_interval: 4 #10
+        scan_interval: 10
 
       # 0..100%  |  min_soc..max_soc
       - name: Battery level
@@ -1374,7 +1373,7 @@ modbus:
         unit_of_measurement: "%"
         state_class: measurement
         scale: 0.1
-        scan_interval: 70 #600
+        scan_interval: 600
 
       - name: Battery temperature
         unique_id: sg_battery_temperature
@@ -1400,7 +1399,7 @@ modbus:
         device_class: energy
         state_class: total_increasing
         scale: 0.1
-        scan_interval: 70 #600
+        scan_interval: 600
 
       - name: Total battery discharge
         unique_id: sg_total_battery_discharge
@@ -1414,7 +1413,7 @@ modbus:
         device_class: energy
         state_class: total
         scale: 0.1
-        scan_interval: 70 #600
+        scan_interval: 600
 
       - name: Phase A current
         unique_id: sg_phase_a_current
@@ -1427,7 +1426,7 @@ modbus:
         device_class: current
         state_class: measurement
         scale: 0.1
-        scan_interval: 4 #10
+        scan_interval: 10
 
       - name: Phase B current
         unique_id: sg_phase_b_current
@@ -1440,7 +1439,7 @@ modbus:
         device_class: current
         state_class: measurement
         scale: 0.1
-        scan_interval: 4 #10
+        scan_interval: 10
 
       - name: Phase C current
         unique_id: sg_phase_c_current
@@ -1453,7 +1452,7 @@ modbus:
         device_class: current
         state_class: measurement
         scale: 0.1
-        scan_interval: 4 #10
+        scan_interval: 10
 
       - name: Total active power
         unique_id: sg_total_active_power
@@ -1467,7 +1466,7 @@ modbus:
         device_class: power
         state_class: measurement
         scale: 1
-        scan_interval: 4 #10
+        scan_interval: 10
 
       - name: Daily imported energy
         unique_id: sg_daily_imported_energy
@@ -1480,7 +1479,7 @@ modbus:
         device_class: energy
         state_class: total_increasing
         scale: 0.1
-        scan_interval: 70 #600
+        scan_interval: 600
 
       - name: Total imported energy
         unique_id: sg_total_imported_energy
@@ -1494,7 +1493,7 @@ modbus:
         device_class: energy
         state_class: total
         scale: 0.1
-        scan_interval: 70 #600
+        scan_interval: 600
 
       - name: Daily battery charge
         unique_id: sg_daily_battery_charge
@@ -1507,7 +1506,7 @@ modbus:
         device_class: energy
         state_class: total_increasing
         scale: 0.1
-        scan_interval: 70 #600
+        scan_interval: 600
 
       - name: Total battery charge
         unique_id: sg_total_battery_charge
@@ -1521,7 +1520,7 @@ modbus:
         device_class: energy
         state_class: total
         scale: 0.1
-        scan_interval: 70 #600
+        scan_interval: 600
 
       - name: Daily exported energy
         unique_id: sg_daily_exported_energy
@@ -1534,7 +1533,7 @@ modbus:
         device_class: energy
         state_class: total_increasing
         scale: 0.1
-        scan_interval: 70 #600
+        scan_interval: 600
 
       - name: Total exported energy
         unique_id: sg_total_exported_energy
@@ -1548,7 +1547,7 @@ modbus:
         device_class: energy
         state_class: total
         scale: 0.1
-        scan_interval: 70 #600
+        scan_interval: 600
 
       - name: EMS mode selection raw
         unique_id: sg_ems_mode_selection_raw
@@ -1557,7 +1556,7 @@ modbus:
         input_type: holding
         data_type: uint16
         state_class: measurement
-        scan_interval: 4 #10
+        scan_interval: 10
 
       - name: Battery forced charge discharge cmd raw
         unique_id: sg_battery_forced_charge_discharge_cmd_raw
@@ -1567,7 +1566,7 @@ modbus:
         data_type: uint16
         precision: 0
         state_class: measurement
-        scan_interval: 4 #10
+        scan_interval: 10
 
       - name: Battery forced charge discharge power
         unique_id: sg_battery_forced_charge_discharge_power
@@ -1583,7 +1582,7 @@ modbus:
         unit_of_measurement: W
         device_class: power
         state_class: measurement
-        scan_interval: 4 #10
+        scan_interval: 10
 
       - name: Max SoC
         unique_id: sg_max_soc
@@ -1596,7 +1595,7 @@ modbus:
         device_class: battery
         state_class: measurement
         scale: 0.1
-        scan_interval: 4 #10
+        scan_interval: 10
 
       - name: Min SoC
         unique_id: sg_min_soc
@@ -1609,7 +1608,7 @@ modbus:
         device_class: battery
         state_class: measurement
         scale: 0.1
-        scan_interval: 4 #10
+        scan_interval: 10
 
       # Called "Feed-in limitation value" in spec
       - name: Export power limit
@@ -1623,7 +1622,7 @@ modbus:
         device_class: power
         state_class: measurement
         scale: 1
-        scan_interval: 4 #10
+        scan_interval: 10
 
       # U16, 0x55:Disable, 0xAA:Enable
       # called "Off-grid option" in spec
@@ -1634,7 +1633,7 @@ modbus:
         input_type: holding
         data_type: uint16
         state_class: measurement
-        scan_interval: 4 #10
+        scan_interval: 10
 
       # called "Feed-in limitation" in spec
       # reg 13087 U16 0xAA: Enable 0x55: Disable
@@ -1646,7 +1645,7 @@ modbus:
         data_type: uint16
         precision: 0
         state_class: measurement
-        scan_interval: 4 #10
+        scan_interval: 10
 
       #undocumented sensor (reverse engineered by some guys of photovoltaikforum.com and forum.iobroker.net )
       - name: Reserved SoC for backup
@@ -1659,7 +1658,7 @@ modbus:
         device_class: battery
         state_class: measurement
         scale: 1
-        scan_interval: 4 #10
+        scan_interval: 10
 
       # Inverter Firmware version from register 13250 to 13264 as UTF8 string
       # NOTE: SH3.0-10RS and MG5-6RL are NOT supported
@@ -1702,7 +1701,7 @@ modbus:
         data_type: uint16
         precision: 0
         state_class: measurement
-        scan_interval: 4 #10        
+        scan_interval: 10
 
       - name: Battery max charge power
         unique_id: sg_battery_max_charge_power
@@ -1715,7 +1714,7 @@ modbus:
         device_class: power
         state_class: measurement
         scale: 10
-        scan_interval: 4 #10
+        scan_interval: 10
 
       - name: Battery max discharge power
         unique_id: sg_battery_max_discharge_power
@@ -1728,7 +1727,7 @@ modbus:
         device_class: power
         state_class: measurement
         scale: 10
-        scan_interval: 4 #10
+        scan_interval: 10
 
       #undocumented sensor (reverse engineered by some guys of photovoltaikforum.com and forum.iobroker.net )
       - name: Battery charging start power
@@ -1742,7 +1741,7 @@ modbus:
         device_class: power
         state_class: measurement
         scale: 10
-        scan_interval: 4 #10
+        scan_interval: 10
 
       #undocumented sensor (reverse engineered by some guys of photovoltaikforum.com and forum.iobroker.net )
       - name: Battery discharging start power
@@ -1756,7 +1755,7 @@ modbus:
         device_class: power
         state_class: measurement
         scale: 10
-        scan_interval: 4 #10
+        scan_interval: 10
 
 sensor:
   - platform: filter
@@ -2033,9 +2032,9 @@ template:
       #   device_class: power
       #   state_class: measurement
       #   availability: >-
-      #     {{ 
-      #     not is_state('sensor.mppt3_voltage', 'unavailable') 
-      #     and not is_state('sensor.mppt3_current', 'unavailable' ) 
+      #     {{
+      #     not is_state('sensor.mppt3_voltage', 'unavailable')
+      #     and not is_state('sensor.mppt3_current', 'unavailable' )
       #     }}
       #   state: "{{ (states('sensor.mppt3_voltage') | float * states('sensor.mppt3_current') | float) |int }}"
 
@@ -2746,7 +2745,7 @@ input_select:
       - "Self-consumption mode (default)"
       - "Forced mode"
       - "External EMS" # required for multiple inverters main /follower?
-      - "VPP"  # used for Amber control
+      - "VPP" # used for Amber control
     # these are commented, because they are rarely used
     #      - "MicroGrid"
 
@@ -2770,7 +2769,7 @@ input_select:
     options:
       - "Enabled"
       - "Disabled"
-    icon: mdi:export      
+    icon: mdi:export
 
   set_sg_global_mpp_scan_manual:
     name: Global mpp scan manual
@@ -3018,7 +3017,7 @@ automation:
     conditions: []
     variables:
       ems_mode_self_consume: 0
-      ems_mode_forced: 2   # called "compulsory mode in modbus spec"
+      ems_mode_forced: 2 # called "compulsory mode in modbus spec"
       ems_mode_external: 3
       ems_mode_vpp: 4
       ems_mode_microgrid: 8
